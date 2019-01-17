@@ -465,7 +465,7 @@ namespace parser
 		//! <node_name>			:= [a-zA-Z_]+ [ '<' TEMPLATE_PARAMETERS '>' ]
 		bool node_name( const char*& input , std::string& dest )
 		{
-			if( !std::isalpha(*input) || *input == '_' )
+			if( !std::isalpha(*input) && *input != '_' )
 				return false;
 			
 			do{
